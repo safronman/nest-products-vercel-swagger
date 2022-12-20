@@ -1,11 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { get } from 'http';
+
 import { createWriteStream } from 'fs';
+import { get } from 'https';
 
 const PORT = process.env.PORT || 5000;
-const serverUrl = 'https://nest-products-vercel-swagger.vercel.app/';
+const serverUrl = 'https://nest-products-vercel-swagger.vercel.app';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
